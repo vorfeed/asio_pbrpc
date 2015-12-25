@@ -140,7 +140,9 @@ server.Stop();
 
 * cmake
 
-* optional: protobuf
+* boost
+
+* protobuf
 
 
 ================================
