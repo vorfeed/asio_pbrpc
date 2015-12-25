@@ -1,0 +1,27 @@
+package asio_pbrpc;
+
+message EchoRequest {
+  required string message = 1;
+};
+
+message EchoResponse {
+  required string response = 1;
+};
+
+message DiscardRequest {
+  required string message = 1;
+};
+
+message DiscardResponse {
+};
+
+service OneService {
+  rpc Echo(EchoRequest) returns (EchoResponse);
+  rpc Discard(DiscardRequest) returns (DiscardResponse);
+};
+
+service AnotherService {
+  rpc Echo(EchoRequest) returns (EchoResponse);
+};
+
+option cc_generic_services = true;
